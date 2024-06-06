@@ -20,5 +20,14 @@ public class Main {
         Animal cat = new Cat();
         cat.makeSound(); // Gọi phương thức `makeSound` của `Cat`
         cat.sleep();    // Gọi phương thức `sleep` của `Animal`
+
+        // Khởi tạo đối tượng của lớp con `DogBunny`
+        Animal dogBunny = new Animal.DogBunny();
+        System.out.println(dogBunny.fname);
+        System.out.println(dogBunny.age);
+        System.out.println(((Animal.DogBunny) dogBunny).dateOfBirth);
+        dogBunny.makeSound(); // Gọi phương thức `makeSound` của `DogBunny`
+        dogBunny.sleep();    // Gọi phương thức `sleep` của `Animal`
+
     }
 }
