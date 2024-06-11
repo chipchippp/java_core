@@ -68,7 +68,10 @@ public class Main {
                     studentList.gpaSortStudentList();
                     break;
                     case 8:
-                    System.out.println(studentList.checkStudentListEmpty());
+                        System.out.println("Enter id: ");
+                        id = sc.nextLine();
+                        st = new Student(id);
+                        System.out.println(studentList.checkStudentListEmpty(st));
                     break;
                     case 9:
                     System.out.println(studentList.checkStudentListFull());

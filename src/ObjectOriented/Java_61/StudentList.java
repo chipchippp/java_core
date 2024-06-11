@@ -1,6 +1,8 @@
 package ObjectOriented.Java_61;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class StudentList {
     private ArrayList<Student> students;
@@ -46,19 +48,29 @@ public class StudentList {
     }
     public void searchStudent(String name) {
         for (Student student : students) {
-            if (student.getName().equals(name)) {
+            if (student.getName().indexOf(name)>=0) {
                 System.out.println(student);
-                break;
             }
         }
     }
     public void gpaSortStudentList() {
-        students.sort((s1, s2) -> Double.compare(s1.getGpa(), s2.getGpa()));
+        Collections.sort(this.students, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2) {
+                if (o1.getGpa() > o2.getGpa()) {
+                    return 1;
+                } else if (o1.getGpa() < o2.getGpa()) {
+                    return -1;
+                } else {
+                    return 0;
+                    }
+            }
+        });
     }
-    public boolean checkStudentListEmpty() {
-        return students.isEmpty();
+    public boolean checkStudentListEmpty(Student student) {
+        return this.students.contains(student);
     }
-    public boolean checkStudentListFull() {
-        return students.size() == 2;
+    public int checkStudentListFull() {
+        return students.size();
     }
 }
