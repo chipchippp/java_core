@@ -21,5 +21,19 @@ public class Main {
 //        Math.PI là một hằng số static, nó chứa giá trị của số PI (3.141592653589793).
 //        Bạn có thể truy cập nó mà không cần tạo một đối tượng của lớp Math.
 
+//        So sánh chuỗi trong Java
+        String str = "Hello";
+        String str2 = "Hello";
+        String str3 = new String("Hello");
+
+        String result = str == str2 ? "Equal" : "Not Equal";
+        System.out.println(result); // Equal
+
+        result = str == str3 ? "Equal" : "Not Equal";
+        System.out.println(result); // Not Equal
+
+        result = str.equals(str3) ? "Equal" : "Not Equal";
+        System.out.println(result); // Equal
+
     }
 }
