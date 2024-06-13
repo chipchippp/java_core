@@ -11,5 +11,9 @@ public class Main {
 //        không được biểu diễn dưới dạng một ký tự đơn lẻ (như các ký tự ngoài Basic Multilingual Plane của Unicode).
         int result = str.codePointAt(0);
         System.out.println(result);
+
+        //        Phương thức codePointBefore()
+        int before = str.codePointBefore(1);
+        System.out.println(before);
     }
 }
