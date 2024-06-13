@@ -2,6 +2,7 @@ package StringMethods.contains_1;
 
 public class Main {
     public static void main(String[] args) {
+//        Phương thức này contains() kiểm tra xem một chuỗi có chứa một chuỗi ký tự hay không.
         String str = "Hello World";
         boolean result1 = str.contains("Hello");
         System.out.println(result1); // true
