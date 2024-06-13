@@ -15,5 +15,9 @@ public class Main {
         //        Phương thức codePointBefore()
         int before = str.codePointBefore(1);
         System.out.println(before);
+
+        //        Phương thức codePointCount()
+        int count = str.codePointCount(0, 5);
+        System.out.println(count);
     }
 }
